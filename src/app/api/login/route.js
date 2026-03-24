@@ -7,7 +7,7 @@ export async function POST(request) {
 
     const client = await clientPromise;
     const db = client.db("volopay");
-    const collection = db.collection("user");
+    const collection = db.collection("users");
 
     await collection.insertOne({ email, password, createdAt: new Date() });
 

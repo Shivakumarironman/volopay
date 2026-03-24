@@ -82,8 +82,8 @@ export default function LoginForm() {
       {/* Buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
         <button className="flex-1 border border-gray-200 rounded-lg py-2 text-sm flex items-center justify-center gap-2 hover:bg-gray-50 cursor-pointer">
-          <Image src="/google-logo.png" alt="Google Logo" width={34} height={34} />
-          <span className="text-md font-semibold text-gray-500">Login with Google</span>
+          <Image src="/google-logo.png" alt="Google Logo" width={30} height={30} />
+          <span className="text-md font-semibold text-gray-500 ml-2">Login with Google</span>
         </button>
 
         <button
