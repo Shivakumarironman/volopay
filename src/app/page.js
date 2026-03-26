@@ -5,7 +5,7 @@ export default async function Home({ searchParams }) {
   const params = await searchParams;
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 h-screen">
       <div className="w-full flex items-center ">
         <LeftSection />
         <div className="mx-auto">
