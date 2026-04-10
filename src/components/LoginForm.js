@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import Thanks from "./Thanks";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -11,6 +12,7 @@ export default function LoginForm() {
   const [emailTouched, setEmailTouched] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const hasEmailValue = email.trim() !== "";
@@ -45,6 +47,7 @@ export default function LoginForm() {
         return;
       }
 
+      setIsOpen(true);
       setSubmitMessage("Login details saved successfully");
       setEmail("");
       setPassword("");
@@ -193,6 +196,8 @@ export default function LoginForm() {
         <p className="mt-4 text-sm text-center text-gray-600">{submitMessage}</p>
       )}
 
+
+      <Thanks isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </div>
   );
 }
